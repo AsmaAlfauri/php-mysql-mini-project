@@ -12,7 +12,6 @@ if (!$conn) {
     echo "Connection error" . mysqli_connect_error();
 }
 
-
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -28,7 +27,7 @@ if (isset($_POST['login'])) {
         while ($row = $result->fetch_assoc()) {
             echo "id: " . $row["id"] . " - Name: " . $row["fname"] . " " . $row["lname"] . "<br>";
 
-            // save username in a variable to use it in the other page (home.php)
+            // save username in a variable to use it in the other page (home.php) // props
             session_start();
             $_SESSION['user'] =  $row["fname"] . " " . $row["lname"];
 

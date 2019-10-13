@@ -6,6 +6,8 @@
 <h1>
     <?php
         session_start();
+        if(count($_SESSION) < 1)
+            $_SESSION['user'] = "";
         echo "Welcome " . $_SESSION['user'];
     ?>
 </h1>
